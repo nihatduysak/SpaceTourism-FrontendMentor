@@ -19,12 +19,12 @@ export default function Crew() {
                 <div className="container">
                     <Header />
                     <div className="crewHero">
-                        <div className="crewDescriptions">
-                            <div className="crewDescription">
                                 <div className="crewMainTitle">
                                     <h4>02</h4>
                                     <h3>MEET YOUR CREW</h3>
                                 </div>
+                        <div className="crewDescriptions">
+                            <div className="crewDescription">
                                 <div className="crewTitle">
                                     <h2>{data.crew[currentCrew].role}</h2>
                                 </div>

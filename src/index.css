@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: Bellefair;
+}
+
+a {text-decoration: none;}
+
+/* Desktop Start */
+
+.burgerMenu{display: none;}
+
 .homePage {
   background-image: url("./public/img/homepage-bg.jpg");
-  height: 100vh;
   
   background-repeat: round;
 }
@@ -14,6 +25,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
 
   & img {
     padding: 50px;
@@ -22,13 +35,12 @@
 
 .navBars {
   display: flex;
-  width: 830px;
+  padding: 38px 90px 39px 80px;
   height: 96px;
   margin-top: 25px;
   justify-content: flex-end;
   align-items: center;
   gap: 50px;
-  padding-right: 140px;
 
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.774227142333984px);
@@ -36,6 +48,8 @@
   & span {
     display: flex;
     gap: 10px;
+    padding: 8px;
+
   }
   
   & p {
@@ -57,10 +71,18 @@
     line-height: normal;
     letter-spacing: 2.7px;
   }
+
+  & .active {
+    border-bottom: 2px solid #FFF;  
+
+  }
 }
 
 .hero {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 128px;
 }
 
 .homeDescription {
@@ -68,9 +90,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 250px;
-  margin-left: 155px;
-  margin-bottom: 120px;
 
   & h3 {
     color: #D0D6F9;
@@ -106,8 +125,6 @@
   height: 224px;
   border-radius: 274px;
   background: #FFF;
-  margin-left: 365px;
-  margin-top: 375px;
 
   & h3 {
     text-align: center;
@@ -132,51 +149,65 @@
 
 .destinationPage {
   background-image: url("/img/destinationpage-bg.png");
-  background-repeat: round;
-  height: 100vh;
+  background-repeat:round;
+  background-size: cover;
+  background-position: center;
+ }
+ 
+ .destinationMainTitle {
+   display: flex;
+   gap: 28px;
+ 
+   & h4 {
+     color: #FFF;
+     font-family: Barlow Condensed;
+     font-size: 28px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     letter-spacing: 4.725px;
+   }
+ 
+   & h3 {
+     margin-bottom: 30px;
+     color: #FFF;
+     font-family: Barlow Condensed;
+     font-size: 28px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     letter-spacing: 4.725px;
+     text-transform: uppercase;
+   }
+ }
+
+
+.destinationHero {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+
 }
 
 .destinationDescriptions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.destinationMainTitle {
   display: flex;
-  gap: 28px;
-  margin-left: 165px;
-  margin-top: 60px;
-  margin-bottom: 80px;
-
-  & h4 {
-    color: #FFF;
-    font-family: Barlow Condensed;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 4.725px;
-  }
-
-  & h3 {
-    margin-bottom: 30px;
-    color: #FFF;
-    font-family: Barlow Condensed;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 4.725px;
-    text-transform: uppercase;
-  }
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px ;
 }
+
 
 .destinationImg {
-  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .destinationDescription {
-  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 380px;
 }
 
 .destinationNavBar {
@@ -186,7 +217,8 @@
 
   & button {
     color: #FFF;
-    background-color: #0B0D17;
+    border: none;
+    background-color:transparent;
     font-family: Barlow Condensed;
     font-size: 16px;
     font-style: normal;
@@ -211,7 +243,6 @@
 }
 
 .destinationInfo p {
-  width: 445px;
   margin-bottom: 83px;
   color: #D0D6F9;
   font-family: Barlow;
@@ -252,14 +283,17 @@
 .crewPage {
   background-image: url("./public/img/crewpage-bg.png");
   background-repeat: round;
-  height: 100vh;
+}
+
+
+.crewHero {
+  padding: 64px;
 }
 
 .crewMainTitle {
   display: flex;
   gap: 24px;
-  margin-top: 60px;
-  margin-bottom: 154px;
+  padding-left: 40px;
 
   & h4 {
     color: #FFF;
@@ -310,16 +344,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 177.778% */
+  margin-bottom: 120px;
 }
+
+
 
 .crewDescriptions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  padding-left: 40px;
 }
 
-.crewDescription {
-  margin-left: 155px;
-}
+/* .crewDescription {
+  padding: 0 30px 0 155px;
+} */
 
 .crewTitle {
   margin-bottom: 27px;
@@ -338,15 +377,6 @@
   }
 }
 
-.crewInfo {
-  width: 445px;
-  margin-bottom: 120px;
-}
-
-.crewImg {
-  margin-top: 46px;
-}
-
 .crewSelectionBar {
   display: flex;
   gap: 35px;
@@ -362,30 +392,34 @@
   }
 }
 
+
+
+.technologyHero {
+  padding-bottom: 100px;
+}
+
 .technologyPage {
   background-image: url('/public/img/technology-bg.jpg');
   background-repeat: round;
-  height: 100vh;
 }
 
 .technologyDescriptions {
   display: flex;
   justify-content: space-between;
-  margin-left: 150px;
+  gap: 150px;
+  align-items: center;
 }
 
 .technologyDescription { 
   display: flex;
-  gap: 80px;
-  margin-top: 180px;
+  gap: 30px;
 }
 
 .technologyMainTitle {
-  margin-left: 150px;
-  margin-top: 76px;
   display: flex;
   align-items: center;
   gap: 24px;
+  padding: 76px 0 0 155px;
 
   & h4 {
     color: #FFF;
@@ -412,6 +446,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 0 10px 0 155px;
 
   & button {
     width: 80px;
@@ -438,7 +473,7 @@
 
 .technologyInfo {
 
-  & .technologyTitle {
+  & .technologyTitle h4 {
     margin-bottom: 11px;
     color: #D0D6F9;
     font-family: Barlow Condensed;
@@ -449,7 +484,7 @@
     letter-spacing: 2.7px;
   }
 
-  & .technologyName {
+  & .technologyName h4 {
     color: #FFF;
     font-family: Bellefair;
     font-size: 56px;
@@ -459,8 +494,7 @@
     margin-bottom: 17px;
   }
 
-  & .technologyInfo {
-    width: 445px;
+  & .technologyInfo p {
     color: #D0D6F9;
     font-family: Barlow;
     font-size: 18px;
@@ -470,7 +504,819 @@
   }
 }
 
-.technologyImg {
-  margin-top: 50px;
-  margin-bottom: 60px;
+/* .technologyImg {
+  padding: 0 0 107px;
+} */
+
+/* Desktop End */
+
+/* Tablet Start */
+
+@media (width < 769px) {
+
+  .burgerMenu{display: none;}
+
+  body {
+    background-color: #000;
+  }
+
+  .header {
+    margin-bottom: 40px;
+
+    & img {
+      padding: 0 50px;
+    }
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .explore {
+    margin-bottom: 24px;
+  }
+
+
+  .destinationNavBar {
+    padding: 0;
+  }
+
+  .destinationDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destinationDescriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & img {
+      margin-bottom: 48px;
+    }
+  }
+
+  .destinationTitle {
+
+    & h1 {
+      text-align: center;
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .destinationInfo {
+
+    & p {
+      text-align: center;
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 175% */
+    }
+  }
+
+  .roadInfo {
+
+    & {
+      padding: 0;
+    }
+  }
+
+  .destinationMainTitle {
+    padding: 40px 0 25px 50px;
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 3.375px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.375px;
+      text-transform: uppercase;
+    }
+  }
+
+  .distance {
+
+    & p {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow Condensed;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.362px;
+      text-transform: uppercase;
+    }
+
+    & h4 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .travelTime {
+
+    & p {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow Condensed;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.362px;
+      text-transform: uppercase;
+    }
+
+    & h4 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .navNumber {
+    display: none;
+  }
+
+  .navBars {
+    padding: 0 10px;
+    gap: 37px;
+    margin: 0;
+  }
+
+  .crewDescriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap: 32px;
+  }
+
+  .crewHero {
+    padding: 0;
+  }
+
+  .crewMainTitle {
+    padding: 0 50px;
+    margin-bottom: 60px;
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 3.375px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.375px;
+      text-transform: uppercase;
+    }
+  }
+
+
+  .crewTitle {
+    padding: 0 50px;
+  
+    & h2 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  .crewName h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Bellefair;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+
+
+  .crewInfo { 
+  
+    & p {
+    color: #D0D6F9;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    margin-bottom: 40px;
+    }
+  }
+
+  .crewSelectionBar {
+    justify-content: center;
+  }
+
+  .crewImg img {
+    width: 75%;
+  }
+
+  .technologyDescriptions {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 48px;
+    align-items: normal;
+
+  }
+
+  .technologyMainTitle {
+    padding: 10px 60px 50px;
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 3.375px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.375px;
+      text-transform: uppercase;
+    }
+  }
+
+  .technologyImg {
+    overflow-y: hidden;
+    height: 300px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .technologyDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 0 110px;
+    align-items: center;
+
+    & .technologyNavBar {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+
+      & button {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .technologyInfo {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    & p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  .homeDescription {
+    padding: 128px 0;
+
+    & h3 {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow Condensed;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 3.375px;
+    }
+
+    & h1 {
+      color: #FFF;
+      font-family: Bellefair;
+      font-size: 150px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150px; /* 100% */
+    }
+
+    & p {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 175% */
+    }
+  }
+}
+
+/* Tablet End */
+
+/* Mobile Start  */
+
+@media (width < 400px) {
+
+  .header {
+    margin: 0;
+
+    & img {
+      padding: 0 24px;
+    }
+
+    .burgerMenu {
+      display: block;
+      
+      & .burgerClose {
+        display: none;
+      }
+
+      & .burgerOpen {
+        display: block;
+      }
+    }
+    .show {
+
+      & .burgerClose {
+        display: block;
+      }
+
+      & .burgerOpen {
+        display: none;
+      }
+
+    }
+
+  }
+
+
+  
+
+  .navBars {
+    /* flex-direction: column-reverse; */
+    background: none;
+    backdrop-filter: none; 
+    padding: 0;
+
+    & nav {
+      position: absolute;
+      top: 64px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.774227142333984px);
+    }
+
+    & .navNumber {
+      display: block;
+    }
+  }
+
+
+  .homeDescription {
+    width: 100%;
+    padding: 64px 0;
+    
+    & h3 {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.7px;
+    }
+
+    & h1 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100px; /* 125% */
+    }
+
+    & p {
+      padding: 0 60px;
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 166.667% */
+    }
+  }
+
+  .explore {
+    margin-bottom: 24px;
+    width: 150px;
+    height: 150px;
+
+    & h3 {
+      color: #0B0D17;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 1.25px;
+    }
+  }
+
+
+  .destinationHero {
+    padding: 0;
+    align-items: center;
+  }
+
+  .destinationMainTitle {
+    text-align: center;
+    padding: 0;
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.7px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+  }
+
+  .destinationDescriptions {
+    padding: 0;
+  }
+
+  .destinationDescription {
+    width: 100%;
+
+  }
+
+  .destinationTitle {
+
+
+    & h1 {
+      font-size: 56px;
+    }
+  }
+
+  .roadInfo {
+    padding: 0;
+  }
+
+  .destinationImg {
+
+    & img {
+      width: 259px;
+      height: 259px;
+      flex-shrink: 0;
+    }
+  }
+
+  .destinationNavBar {
+    margin-bottom: 24px;
+
+    & button {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.362px;
+    }
+  }
+
+  .destinationTitle {
+
+    color: #FFF;
+    font-family: Barlow Condensed;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+  }
+
+  .destinationInfo {
+
+
+    color: #D0D6F9;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+  }
+
+  .roadInfo {
+    gap: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .crewHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .crewMainTitle {
+    margin-bottom: 24px;
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.7px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+  }
+
+
+
+  .crewInfo {
+    padding: 0;
+  }
+
+  .crewDescriptions {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .crewDescription {
+    display: flex;
+    flex-direction: column;
+    & .crewTitle {
+      order: 2;
+    }
+
+    & .crewName {
+      order: 3;
+    }
+
+    & .crewInfo {
+      order: 4;
+    }
+
+    & .crewSelectionBar {
+      margin-bottom: 24px;
+    }
+  }
+
+  .crewImg img {
+    flex-shrink: 0;
+    margin-bottom: 30px;
+  }
+
+
+  .crewTitle {
+
+    & h2 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .crewName {
+
+    & h2 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .crewInfo {
+    padding: 0 30px;
+
+    & p {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 166.667% */
+    }
+  }
+
+  .crewSelectionBar {
+    margin-bottom: 65px;
+  }
+
+  .technologyMainTitle {
+
+    & h4 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.7px;
+    }
+
+    & h3 {
+      color: #FFF;
+      font-family: Barlow Condensed;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+  }
+
+  .technologyImg {
+
+    
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  .technologyNavBar {
+    padding: 30px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .technologyDescription {
+    padding: 0;
+  }
+
+  .technologyTitle {
+
+    & h4 {
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow Condensed;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 2.362px;    
+    }
+  }
+
+  .technologyName {
+
+    & h4 {
+      color: #FFF;
+      text-align: center;
+      font-family: Bellefair;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .technologyInfo {
+
+    text-align: center;
+    
+    & p {
+      padding: 0 30px;
+      color: #D0D6F9;
+      text-align: center;
+      font-family: Barlow;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px; /* 166.667% */
+    }
+  }
+}
+
+/* Mobile End  */
+
+@media (width > 400px) {
+  .burgerMenu{display: none;}
+  .navBars{
+    & nav {
+
+      display: flex !important;
+    }
+  }
+  
 }

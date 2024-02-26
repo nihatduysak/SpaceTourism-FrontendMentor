@@ -518,9 +518,7 @@ a {text-decoration: none;}
 
   .burgerMenu{display: none;}
 
-  body {
-    background-color: #000;
-  }
+  body {background-color: #000;}
 
   .header {
     margin-bottom: 40px;
@@ -1309,9 +1307,7 @@ a {text-decoration: none;}
     }
   }
 }
-
 /* Mobile End  */
-
 
 @media (width > 450px) {
   .burgerMenu{display: none;}

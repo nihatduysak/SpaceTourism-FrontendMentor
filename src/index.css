@@ -17,7 +17,8 @@ a {text-decoration: none;}
 .burgerMenu{display: none;}
 
 .homePage {
-  background-image: url("./public/img/homepage-bg.jpg");
+  background-image: url("/img/homepage-bg.jpg");
+  height: 130vh;
   
   background-repeat: round;
 }
@@ -149,9 +150,8 @@ a {text-decoration: none;}
 
 .destinationPage {
   background-image: url("/img/destinationpage-bg.png");
+  height: 130vh;
   background-repeat:round;
-  background-size: cover;
-  background-position: center;
  }
  
  .destinationMainTitle {
@@ -281,7 +281,8 @@ a {text-decoration: none;}
 }
 
 .crewPage {
-  background-image: url("./public/img/crewpage-bg.png");
+  background-image: url("/img/crewpage-bg.png");
+  height: 130vh;
   background-repeat: round;
 }
 
@@ -399,7 +400,8 @@ a {text-decoration: none;}
 }
 
 .technologyPage {
-  background-image: url('/public/img/technology-bg.jpg');
+  background-image: url('/img/technology-bg.jpg');
+  height: 130vh;
   background-repeat: round;
 }
 
@@ -884,7 +886,7 @@ a {text-decoration: none;}
 
 /* Mobile Start  */
 
-@media (width < 400px) {
+@media (width <= 450px) {
 
   .header {
     margin: 0;
@@ -1310,7 +1312,8 @@ a {text-decoration: none;}
 
 /* Mobile End  */
 
-@media (width > 400px) {
+
+@media (width > 450px) {
   .burgerMenu{display: none;}
   .navBars{
     & nav {

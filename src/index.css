@@ -18,7 +18,7 @@ a {text-decoration: none;}
 
 .homePage {
   background-image: url("/img/homepage-bg.jpg");
-  height: 130vh;
+  height: 100vh;
   
   background-repeat: round;
 }
@@ -150,7 +150,7 @@ a {text-decoration: none;}
 
 .destinationPage {
   background-image: url("/img/destinationpage-bg.png");
-  height: 130vh;
+  height: 100vh;
   background-repeat:round;
  }
  
@@ -282,7 +282,7 @@ a {text-decoration: none;}
 
 .crewPage {
   background-image: url("/img/crewpage-bg.png");
-  height: 130vh;
+  height: 100vh;
   background-repeat: round;
 }
 
@@ -401,7 +401,7 @@ a {text-decoration: none;}
 
 .technologyPage {
   background-image: url('/img/technology-bg.jpg');
-  height: 130vh;
+  height: 100vh;
   background-repeat: round;
 }
 
